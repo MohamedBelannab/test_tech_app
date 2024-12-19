@@ -1,11 +1,10 @@
 import express from "express";
 import fs from "fs/promises";
 import cors from "cors";
-import serverless from 'serverless-http'; 
 
 // Create an Express app
 const app = express();
-const port = 5000; // local dev
+const port = 5000;
 
 // Enable CORS
 app.use(cors("*"));
@@ -39,8 +38,6 @@ app.get("/api/products/:id", async (req, res) => {
 });
 
 // Start the server
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}`);
-// });
-
-export const handler = serverless(app);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
