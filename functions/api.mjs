@@ -14,7 +14,8 @@ app.use(express.json());
 
 // Endpoint to get all products
 app.get("/.netlify/functions/api/products", async (req, res) => {
-  const data = await fs.readFile("./database.json");
+  const dataPath = path.resolve('database.json'); 
+  const data = await fs.readFile(dataPath);
   return  res.status(200).json(data)
   try {
     const data = await fs.readFile("database.json");
