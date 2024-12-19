@@ -12,16 +12,15 @@ const __dirname = dirname(__filename);
 const app = express();
 
 // Enable CORS and JSON parsing
-app.use(cors());
+app.use(cors("*"));
 app.use(express.json());
 
 // Endpoint to get all products
 app.get("/.netlify/functions/api/products", async (req, res) => {
   try {
-    const data = await readFile(join(__dirname, "database.json"), "utf-8");
-    res.json(JSON.parse(data));
+    // const data = await readFile(join(__dirname, "database.json"), "utf-8");
+    res.json({"name" : 12});
   } catch (err) {
-    console.error('Error reading products:', err);
     return res.status(500).json({ message: "Error reading products file" });
   }
 });
@@ -48,3 +47,6 @@ app.get("/.netlify/functions/api/products/:id", async (req, res) => {
 
 // Export the serverless handler
 export const handler = serverless(app);
+// app.listen(5000, () => {
+//   console.log(`Server is running on http://localhost:${5000}`);
+// });
