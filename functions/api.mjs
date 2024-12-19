@@ -28,7 +28,7 @@ app.get("/.netlify/functions/api/products/:id", async (req, res) => {
   const productId = parseInt(req.params.id, 10);
   
   try {
-    const data = await readFile(join(__dirname, "database.json"), "utf-8");
+    const data = await readFile("database.json");
     const products = JSON.parse(data);
     const product = products.find((p) => p.id === productId);
     
