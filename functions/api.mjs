@@ -18,10 +18,11 @@ app.use(express.json());
 // Endpoint to get all products
 app.get("/.netlify/functions/api/products", async (req, res) => {
   try {
-    // const data = await readFile(join(__dirname, "database.json"), "utf-8");
-    res.json({"name" : 12});
+    const data = await readFile(join(__dirname, "database.json"), "utf-8");
+    res.json(JSON.parse(data));
   } catch (err) {
-    return res.status(500).json({ message: "Error reading products file" });
+    console.error('Error reading products:', err);
+    return res.status(500).json({ message: "Error" });
   }
 });
 
