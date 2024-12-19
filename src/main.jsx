@@ -4,6 +4,11 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { store } from "./slices/Store.js";
 
+if (import.meta.env.VITE_ENV === "production") {
+    console.warn = () => {};
+    console.error = () => {};
+}
+
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <App />
