@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs/promises";
 import cors from "cors";
 import serverless from 'serverless-http'; 
+import path from 'path';
 
 // Create an Express app
 const app = express();
