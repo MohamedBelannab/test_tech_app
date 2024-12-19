@@ -8,7 +8,44 @@ import { fileURLToPath } from "url";
 
 // Create an Express app
 const app = express();
-
+const database = [
+  {
+      "id": 1,
+      "name": "TERANOV-OR",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product1.png"
+  },
+  {
+      "id": 2,
+      "name": "TERANOV-NK",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product2.png"
+  },
+  {
+      "id": 3,
+      "name": "TERANOV POURPRE",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product3.png"
+  },
+  {
+      "id": 4,
+      "name": "DROPFEED-II",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product4.png"
+  },
+  {
+      "id": 5,
+      "name": "DROPFEED-III",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product5.png"
+  },
+  {
+      "id": 6,
+      "name": "TERANOV-OR",
+      "Emballage": "Sac de 25Kg",
+      "image": "/images/product6.png"
+  }
+]
 // Enable CORS
 app.use(cors("*"));
 app.use(express.json());
@@ -19,12 +56,7 @@ const __dirname = path.dirname(__filename);
 // Endpoint to get all products
 app.get("/.netlify/functions/api/products", async (req, res) => {
   try {
-    // Use absolute path to access database.json
-    const dataPath = path.join(__dirname, "database.json");  // Absolute path to database.json
-    console.log("Reading file from:", dataPath);
-
-    const data = await fs.readFile(dataPath, "utf-8");  // Read file content as a string
-    res.json(JSON.parse(data));  // Parse and send the data as JSON
+    res.json(JSON.parse(database));  
   } catch (err) {
     console.error('Error reading products:', err);
     return res.status(500).json({ message: "Error reading products file" });
