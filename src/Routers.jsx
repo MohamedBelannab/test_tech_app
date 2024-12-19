@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AlertDefault } from "./layouts/Alert";
 const Home = lazy(() => import("./pages/Home"));
 

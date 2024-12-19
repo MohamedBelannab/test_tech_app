@@ -6,7 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import logo from "../../public/logo.png";
 import { Login } from "../components/auth/Login";
 import { SignUp } from "../components/auth/SignUp";

@@ -1,7 +1,10 @@
 import axios from "axios";
+const API_URL = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:8888/.netlify/functions/api'
+  : '/.netlify/functions/api';
 
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:5000/api/' , 
+    baseURL: API_URL , 
 });
 
 api.defaults.headers.common['Content-Type'] = 'application/vnd.api+json'

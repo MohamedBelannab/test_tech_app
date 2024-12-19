@@ -38,8 +38,6 @@ app.get("/api/products/:id", async (req, res) => {
   }
 });
 
-app.use('.netlify/functions/api')
-
 // Start the server
 // app.listen(port, () => {
 //   console.log(`Server is running on http://localhost:${port}`);

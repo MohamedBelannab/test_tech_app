@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "TERANOV-OR",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product1.png"
+    },
+    {
+        "id": 2,
+        "name": "TERANOV-NK",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product2.png"
+    },
+    {
+        "id": 3,
+        "name": "TERANOV POURPRE",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product3.png"
+    },
+    {
+        "id": 4,
+        "name": "DROPFEED-II",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product4.png"
+    },
+    {
+        "id": 5,
+        "name": "DROPFEED-III",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product5.png"
+    },
+    {
+        "id": 6,
+        "name": "TERANOV-OR",
+        "Emballage": "Sac de 25Kg",
+        "image": "/images/product6.png"
+    }
+]
