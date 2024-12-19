@@ -2,12 +2,8 @@ import express from "express";
 import { readFile } from "fs/promises";
 import cors from "cors";
 import serverless from 'serverless-http';
-import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 // Create an Express app
 const app = express();
@@ -19,7 +15,7 @@ app.use(express.json());
 // Endpoint to get all products
 app.get("/.netlify/functions/api/products", async (req, res) => {
   try {
-    const data = await readFile(join(__dirname, "database.json"), "utf-8");
+    const data = await readFile("database.json");
     res.json(JSON.parse(data));
   } catch (err) {
     console.error('Error reading products:', err);
