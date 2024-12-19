@@ -2,7 +2,6 @@ import express from "express";
 import { readFile } from "fs/promises";
 import cors from "cors";
 import serverless from 'serverless-http';
-import { dirname, join } from 'path';
 
 
 // Create an Express app
