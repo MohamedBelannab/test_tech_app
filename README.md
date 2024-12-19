@@ -60,6 +60,8 @@ Le backend de l'application est construit avec Node.js et Express.js, et utilise
    Ouvrez votre terminal et exécutez les commandes suivantes pour cloner le dépôt et naviguer dans le dossier du projet :
    ```bash
    git clone https://github.com/MohamedBelannab/test_tech_app.git
+   ```
+   ```bash
    cd test_technique
    ```
  2. **Installer les dépendances** :
