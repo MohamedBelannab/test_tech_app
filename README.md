@@ -72,7 +72,7 @@ Le backend de l'application est construit avec Node.js et Express.js, et utilise
  3. **Démarrer l'application** :
     Dans le dossier , lancez l'application . :
      ```bash
-     npm install
+     npm run dev
      ```
   4. **Accéder à l'application** :
      - **Le frontend sera accessible à** : http://localhost:5173.
